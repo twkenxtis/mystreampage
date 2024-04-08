@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 添加網站圖示 -->
+    <link rel="icon" href="https://i.imgur.com/tl5avok.png" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Idol Live Stream</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+    <style>
+        body {
+            background-color: #222;
+            color: #ffffff;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column; /* 手機螢幕上的布局是上到下 */
+            align-items: center; /* 水平居中 */
+            justify-content: center; /* 垂直居中 */
+            height: 100vh; /* n% 視窗高度 */
+            width: auto;
+        }
+
+        /* @media 都是電腦排版 */
+        @media only screen and (min-width: 768px) {
+            .container {
+                flex-direction: row; /* 電腦螢幕上的布局是左到右 */
+                flex-flow: wrap;
+                width: auto;
+                height: 85.85vh;
+            }
+        }
+
+        .title-bar {
+            background-color: #222; 
+            padding: 0.1em;
+            width: 99.3%;
+            text-align: center;
+        }
+
+        @media only screen and (min-width: 768px) {
+            .title-bar {
+                background-color: #222; 
+                padding: 10px;
+                width: 98.5%;
+                text-align: center;
+            }
+        }
+        
+        .tile-icon {
+            width: 27px;
+            height: 36px;
+            margin-right: 0.25em;
+            padding: 2px;
+        }
+
+        @media only screen and (min-width: 768px) {
+        .tile-icon {
+            width: 34px;
+            height: 46px;
+            margin: 0.1em;
+            border-top: 1%;
+            padding: 5px;
+            }
+        }
+
+        .title-ive {
+            font-size: 16px;
+            color: #e6e6e6;
+            margin: 0;
+            padding: 0.3em;
+            }   
+        
+        @media only screen and (min-width: 768px) {
+        .title-ive {
+            font-size: 32px;
+            color: #e6e6e6;
+            margin: 0;
+            }   
+        }
+
+        .iframe-video {
+            flex-grow: 1;
+            max-width: 100%; /* 最大寬度為100% */
+            height: 100%; /* 自動調整高度 */
+        }
+
+
+        @media only screen and (min-width: 768px) {
+            .iframe-video {
+                position: relative;
+                bottom: 4.7%;
+                max-width: 65.6%;
+                height: 91.5%;
+            }
+        }
+        
+        .iframe-chat {
+            border-color: #222;
+            flex-grow: 1; /* 將元素彈性增長，以填滿可用空間 */
+            width: 100%;
+            height: 250vh; /* 讓高度自動調整以填滿內容 */
+        }
+
+        @media only screen and (min-width: 768px) {
+            .iframe-chat {
+                position: relative;
+                border-color: #222;
+                border: 0.01px;
+                top: -5.1%;
+                height: 90.75%;
+                max-width: 20%;
+            }
+        }
+
+        .footer {
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 8px;
+            background-color: #222;
+            padding: 4px;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            cursor: pointer;
+        }
+    
+
+        @media only screen and (min-width: 768px) {
+            .footer {
+                font-family: 'Noto Sans TC', sans-serif;
+                font-size: 12px;
+                background-color: #222;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                text-align: center;
+                padding: 0.3em 0 9px;
+                color: #fff;
+                cursor: pointer;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="title-bar">
+        <a href="https://main stream page <domain name>">
+            <img src="https://i.imgur.com/tl5avok.png" alt="ive icon rembg" class="tile-icon">
+        </a>
+        <h3 class="title-ive">Title is here</h3>
+    </div>
+
+    <div class="container">
+        <iframe src="https://Restreamer iframe <domain name>" width="720" height="1280" frameborder="yes" scrolling="yes" allowfullscreen="yes" class="iframe-video"></iframe>
+        <iframe id="twitch-chat-embed" src="https://www.twitch.tv/embed/<twitch user name>/chat?darkpopout&parent=<own domain name>" width="350" height="500" class="iframe-chat"></iframe>
+    </div>
+</body>
+
+<footer class="footer">
+    <!--footer 版權宣告-->
+    <span>禁止在未經版權所有者同意的情況下擅自錄製或提取內容<br>禁止在許多人可以觀看的地方播放，如果被發現，可能會受到法律制裁<br>未經授權處理和傳播內容也是構成侵犯版權的非法行為<br>可能因侵犯版權而承擔民事/刑事責任</span>
+<footer>
+
+</html>
